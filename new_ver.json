@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "data": {
+    "digikam-appimage": {
+      "version": "8.8.0",
+      "url": "https://release-monitoring.org/project/437/"
+    }
+  }
+}
