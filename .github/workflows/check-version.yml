@@ -25,4 +25,6 @@ jobs:
         run: pip3 install nvchecker
 
       - name: Check for update
-        run: nvcmp -c nvchecker.toml --exit-status
+        run: |
+          nvchecker -c nvchecker.toml
+          nvcmp -c nvchecker.toml --exit-status
