@@ -25,11 +25,4 @@ jobs:
         run: pip3 install nvchecker
 
       - name: Check for update
-        run: |
-          OUTPUT=$(nvcmp -c nvchecker.toml)
-          if [ -z "$OUTPUT" ]; then
-            exit 0
-          else
-            echo "$OUTPUT"
-            exit 1
-          fi
+        run: nvcmp -c nvchecker.toml --exit-status
