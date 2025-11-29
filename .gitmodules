@@ -1,3 +1,6 @@
 [submodule "digikam-appimage"]
 	path = digikam-appimage
 	url = ssh://aur@aur.archlinux.org/digikam-appimage.git
+[submodule "bilibili_manga_downloader-bin"]
+	path = bilibili_manga_downloader-bin
+	url = ssh://aur@aur.archlinux.org/bilibili_manga_downloader-bin.git
