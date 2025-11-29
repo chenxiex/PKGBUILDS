@@ -1,6 +1,11 @@
 {
   "version": 2,
   "data": {
+    "bilibili_manga_downloader-bin": {
+      "version": "3.2.2",
+      "gitref": "refs/tags/v3.2.2",
+      "url": "https://github.com/MOMOYATW/bilibili_manga_downloader/releases/tag/v3.2.2"
+    },
     "digikam-appimage": {
       "version": "8.8.0",
       "url": "https://release-monitoring.org/project/437/"
