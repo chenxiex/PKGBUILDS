@@ -1,0 +1,35 @@
+name: check-version
+
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 4 * * *"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      - name: Install nvchecker
+        run: pip3 install nvchecker
+
+      - name: Check for update
+        run: |
+          OUTPUT=$(nvcmp -c nvchecker.toml)
+          if [ -z "$OUTPUT" ]; then
+            exit 0
+          else
+            echo "$OUTPUT"
+            exit 1
+          fi
