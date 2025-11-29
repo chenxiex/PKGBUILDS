@@ -1,0 +1,3 @@
+[submodule "digikam-appimage"]
+	path = digikam-appimage
+	url = ./digikam-appimage
