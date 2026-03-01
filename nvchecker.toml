@@ -2,10 +2,6 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
-[digikam-appimage]
-source = "anitya"
-anitya_id = 437
-
 [bilibili_manga_downloader-bin]
 source = "github"
 github = "MOMOYATW/bilibili_manga_downloader"
