@@ -5,6 +5,9 @@
       "version": "3.2.2",
       "gitref": "refs/tags/v3.2.2",
       "url": "https://github.com/MOMOYATW/bilibili_manga_downloader/releases/tag/v3.2.2"
+    },
+    "wps-office-365": {
+      "version": "12.1.2.24730"
     }
   }
 }

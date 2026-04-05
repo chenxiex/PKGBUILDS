@@ -7,3 +7,11 @@ source = "github"
 github = "MOMOYATW/bilibili_manga_downloader"
 use_latest_release = "true"
 prefix = "v"
+
+[wps-office-365]
+source = "jq"
+url = "https://plus.wps.cn/ops/opsd/api/v1/policy?window_key=wps365_download_pc_muti"
+filter = '''.data[] | select(.key=="downloadcontent") | .value | fromjson
+            | .[] | select(.downloadtype=="linuxintegrate") | .links[] | select(.arch=="X64")
+            | .packageList[0].link | capture("(?<v>\\d+\\.\\d+\\.\\d+\\.\\d+)") |
+            .v'''
